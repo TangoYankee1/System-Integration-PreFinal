@@ -116,7 +116,7 @@ Each file contains one fully-worked **EXAMPLE** at the top, followed by numbered
 **1. Clone the repository**
 ```bash
 https://github.com/ventusire/System-Integration-PreFinal.git
-cd inventoryms-activity/inventory
+cd SysInteg_Student_Prefinals/inventory
 ```
 
 **2. Create the database**
