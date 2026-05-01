@@ -32,29 +32,29 @@ public class CategoryService {
 
     // ── TODO 1 ──────────────────────────────────────────────────────────────
     // Return a single category wrapped in Optional (it may not exist).
+    // CHANGED: Implemented getCategoryById to delegate to the repository.
     public Optional<Category> getCategoryById(Long id) {
-        // TODO: return categoryRepository.findById(id)
-        throw new UnsupportedOperationException("TODO 1 — getCategoryById not implemented yet");
+        return categoryRepository.findById(id);
     }
 
     // ── TODO 2 ──────────────────────────────────────────────────────────────
     // Save (insert or update) a category and return the saved object.
+    // CHANGED: Implemented saveCategory to delegate to the repository.
     public Category saveCategory(Category category) {
-        // TODO: return categoryRepository.save(category)
-        throw new UnsupportedOperationException("TODO 2 — saveCategory not implemented yet");
+        return categoryRepository.save(category);
     }
 
     // ── TODO 3 ──────────────────────────────────────────────────────────────
     // Delete a category by id.
+    // CHANGED: Implemented deleteCategory to delegate to the repository.
     public void deleteCategory(Long id) {
-        // TODO: call categoryRepository.deleteById(id)
-        throw new UnsupportedOperationException("TODO 3 — deleteCategory not implemented yet");
+        categoryRepository.deleteById(id);
     }
 
     // ── TODO 4 ──────────────────────────────────────────────────────────────
     // Return true if the given category name is already taken.
+    // CHANGED: Implemented isNameTaken to delegate to the repository.
     public boolean isNameTaken(String name) {
-        // TODO: return categoryRepository.existsByName(name)
-        throw new UnsupportedOperationException("TODO 4 — isNameTaken not implemented yet");
+        return categoryRepository.existsByName(name);
     }
 }
